@@ -1,0 +1,8 @@
+API="https://exam.elevateegy.com/api/v1"
+NEXTAUTH_SECRET="OxIEyBfIQBW80leVYkYdgiZgDFWstWU5AEJt0JPyrIk="
+NEXTAUTH_URL="http://localhost:3000"
+
+# {
+#     "email": "saboo9653@gmail.com",
+#     "password":"Abdulrahman@50031"
+# }
