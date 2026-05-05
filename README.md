@@ -74,15 +74,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🔑 Environment Variables
-
-```env
-NEXTAUTH_SECRET=your_secret_here
-NEXTAUTH_URL=http://localhost:3000
-NEXT_PUBLIC_API_BASE_URL=your_api_url_here
-```
-
----
 
 ## 📋 Key Implementation Details
 
