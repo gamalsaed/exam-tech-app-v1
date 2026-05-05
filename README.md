@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎓 Elevate Exam App
+A production-ready online exam management platform built with Next.js 14, featuring secure authentication, real-time exam timers, and detailed result analytics.
+🔗 [Live Demo](https://www.dinga-code.site/dashboard)
 
-## Getting Started
+Test Credentials:
+Email: test@test.com | Password: Test1234@test.com
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
+🔐 Secure Authentication — Login, Register, Logout via NextAuth
+🔑 Full Forgot Password Flow — OTP verification + password reset
+📚 Browse Diplomas & Courses — Infinite scroll with lazy loading
+📝 Take Exams — Question-by-question navigation with live countdown timer
+📊 Detailed Results — Donut chart showing score %, correct vs incorrect answers with review
+👤 Account Management — Update profile, change password, delete account
+📱 Fully Responsive — Works across all screen sizes
+
+
+🛠️ Tech Stack
+CategoryTechnologyFrameworkNext.js 14 (App Router)LanguageTypeScriptStylingTailwind CSS + Shadcn UIAuthNextAuth.jsFormsReact Hook Form + ZodArchitectureClean Code + Clean ArchitectureDeploymentVercel
+
+🏗️ Project Structure
+src/
+├── app/                  # Next.js App Router pages
+│   ├── auth/             # Login, Register, Forgot Password, OTP
+│   ├── (dashboard)/      # Protected routes
+│   │   ├── home/         # Diplomas listing
+│   │   ├── exams/        # Exam list & questions
+│   │   └── account/      # Profile & settings
+├── components/           # Reusable UI components
+├── lib/                  # Utilities, API helpers
+└── types/                # TypeScript interfaces
+
+🚀 Getting Started
+bash# Clone the repo
+git clone https://github.com/gamalsaed/exam-tech-app-v1.git
+cd exam-tech-app-v1
+
+# Install dependencies
+yarn install
+
+# Set up environment variables
+cp env .env.local
+# Fill in your NEXTAUTH_SECRET and API_BASE_URL
+
+# Run development server
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📋 Key Implementation Details
+Authentication Flow:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Session management with NextAuth + JWT strategy
+Protected routes using Next.js middleware
+OTP-based password reset with expiry validation
 
-## Learn More
+Exam Engine:
 
-To learn more about Next.js, take a look at the following resources:
+Real-time countdown timer per exam
+Answer state preserved across question navigation
+Auto-submit on timer expiry
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Results Analytics:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Donut chart with correct/incorrect breakdown
+Per-question review with correct answer highlighted
+Restart or explore more exams flow
